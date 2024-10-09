@@ -1,21 +1,65 @@
 # TODO
+
+## Upgrade to Sway Atomic 41
+
+## Upgrade to labwc 0.8.0
 * Started from Sericea image since it's sway wlroots based already.
+* Sericea renamed to Fedora Sway Atomic 40
+* labwc:latest is currently Fedora 40 with labwc 0.7.4 
+  * Migrate container to Fedora Sway Atomic 41 with labwc 0.8.0?
 
-## Window Session
-* labwc compositor
-* https://labwc.github.io/
-* https://github.com/labwc/labwc/releases/tag/0.8.0
+## Waybar Customizations
+* show workspaces
+* switch workspaces
+* click on date to launch calendar app
+* wlr/workspaces: Unknown module: wlr/workspaces
 
-## Get working one way or another
+```json
+"wlr/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+		"5": "",
+		"active": "",
+		"default": ""
+	},
+	"sort-by-number": true
+}
+```
+
+```
+pkill waybar, waybar & disown
+```
+
+## Try other panel bars
+* xfce4panel
+```
+```
+
+
+## Themes
+* waybar show workspaces: UNFORTUNATELY, Not currently possible with waybar
+* https://www.reddit.com/r/unixporn/comments/188ok2j/labwc_a_nice_simple_wayland_desktop/
+
+## 
+
+## Alarm
+* could we set an alarm for the clock to go off? swaybar?
+* 
+
+## Developer Experience
 * docker-ce: added from base image
 * vscode: with devcontainer support
 * toolbx
 * vscode: toolbx support
+
+## Apps
 * bitwarden: from flakhub?
 * evolution-data-server
   * sync with carddav and caldav
   * use in thunderbird or geary or other mail
   * gnome-calendar or other
   * gnome-contacts or other
-
-
