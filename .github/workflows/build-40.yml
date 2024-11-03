@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    name: build
+    name: build version
     uses: ./.github/workflows/build-version.yml
     permissions:
       contents: read
