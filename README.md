@@ -1,10 +1,15 @@
 # README
-* Built on Sericea the sway atomic desktop spin of fedora
-* Sericea renamed to Fedora Sway Atomic 40
-* labwc:latest is currently Fedora 40 
-* Wherever possible continue to use the tools and services used for sway configured in the labwc environment
+* Built on Universal Blue "sericea-main:latest"
+  * https://github.com/ublue-os/main
+  * https://github.com/ublue-os/main/pkgs/container/sericea-main/versions?filters%5Bversion_type%5D=tagged
+* Published to:
+  * ostree-unverified-registry:ghcr.io/ialexandermoon/labwc:latest
+  * https://github.com/iAlexanderMoon/labwc/pkgs/container/labwc
 
 ## Image Installed Tools
+* labwc: 
+  * fedora 40: 0.7.4
+  * fedora 41: 0.8.0
 * foot: terminal
 * swaylock : screen locker
 * waybar : customizable bar for sway
@@ -17,6 +22,7 @@
 * Thunar : wayland file manager
 * grim & slurp : screenshots
 
+
 # Purpose
 
 # https://fedoraproject.org/atomic-desktops/sway/
@@ -27,7 +33,7 @@ This repository is built using the template for building your own custom Univers
 
 * Try adding labwc to a base image and/or any other tools or things I feel like.
 
-* Successfull build will publish the image to the github container registry (ghcr)
+* Successfull build will publish the image to the github container registry (ghcr
 
 # Install
 * From an ostree based system

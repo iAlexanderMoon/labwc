@@ -1,0 +1,21 @@
+name: ublue sericea-main:40 with labwc
+on:
+  schedule:
+    - cron: '05 10 * * *'  # 10:05am UTC everyday
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    uses: ./.github/workflows/build-version.yml
+    secrets: inherit
+    with:
+      fedora_version: 40

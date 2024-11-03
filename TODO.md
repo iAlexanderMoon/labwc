@@ -1,12 +1,9 @@
 # TODO
 
-## Upgrade to Sway Atomic 41
+## Builds
+* Add targeted versions: sericea-main:40 vs sericea-main:41
+* Change github container path directory? 
 
-## Upgrade to labwc 0.8.0
-* Started from Sericea image since it's sway wlroots based already.
-* Sericea renamed to Fedora Sway Atomic 40
-* labwc:latest is currently Fedora 40 with labwc 0.7.4 
-  * Migrate container to Fedora Sway Atomic 41 with labwc 0.8.0?
 
 ## Waybar Customizations
 * show workspaces
