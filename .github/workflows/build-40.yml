@@ -16,6 +16,10 @@ jobs:
   build:
     name: build
     uses: ./.github/workflows/build-version.yml
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     secrets: inherit
     with:
       fedora_version: 40
