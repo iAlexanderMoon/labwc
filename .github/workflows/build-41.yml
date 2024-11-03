@@ -14,7 +14,11 @@ on:
 
 jobs:
   build:
-    name: build
+    name: build version
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: ./.github/workflows/build-version.yml
     secrets: inherit
     with:
