@@ -1,5 +1,5 @@
 ---
-name: build-ublue-custom-labwc
+name: build ublue sericea-main version with labwc
 on:
   workflow_call:
     inputs:
