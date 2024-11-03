@@ -1,9 +1,9 @@
 # TODO
 
 ## Builds
-* Add targeted versions: sericea-main:40 vs sericea-main:41
 * Change github container path directory? 
-
+  * Instead of everything building to ghcr.io/ialexandermoon/labwc can we make a subdirectory for ublue or something?
+  * ghcr.io/ialexandermoon/ublue/labwc
 
 ## Waybar Customizations
 * show workspaces
