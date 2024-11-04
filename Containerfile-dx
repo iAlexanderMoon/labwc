@@ -3,16 +3,13 @@
 ARG SOURCE_TAG="latest"
 FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 
+
+COPY build-dx.sh /tmp/build.sh
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build.sh && \
+    ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
-# Install packages from fedora repos
-# 
-RUN mkdir -p /var/lib/alternatives && \
-#    rpm-ostree install containerd.io && \
-    rpm-ostree install docker-ce && \
-    rpm-ostree install docker-ce-cli && \
-    rpm-ostree install docker-compose-plugin && \
-    ostree container commit
-		
