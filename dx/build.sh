@@ -18,12 +18,10 @@ rpm-ostree install docker-ce
 rpm-ostree install docker-ce-cli
 rpm-ostree install docker-compose-plugin
 
-# 
-
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
 
+systemctl enable docker.socket
 #systemctl enable podman.socket
-

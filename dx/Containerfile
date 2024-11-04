@@ -5,7 +5,7 @@ FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 
 COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
 
-COPY build-dx.sh /tmp/build.sh
+COPY dx/build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
