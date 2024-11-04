@@ -27,15 +27,30 @@ pkill waybar
 waybar & disown
 ```
 
-
 # Flatpak
 * for gui tools
 
-## Firefox
+## Productivity
+
+### Web browser
 * firefox
 
-## Thunderbird / Betterbird
+## E-Mail Client
+* Thunderbird / Betterbird
 * thunderbird
+
+## Audio
+
+## CD Ripper: Sound Juicer
+* Sound Juicer: org.gnome.SoundJuicer
+
+## Tag editor
+* MusicBrainz Picard: org.musicbrainz.Picard
+
+### Music Player (Local Files)
+* audacious
+* rythmbox
+
 
 # Brew
 * for command line tools
