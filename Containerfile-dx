@@ -10,7 +10,7 @@ FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 # Install packages from fedora repos
 # 
 RUN mkdir -p /var/lib/alternatives && \
-    rpm-ostree install containerd.io && \
+#    rpm-ostree install containerd.io && \
     rpm-ostree install docker-ce && \
     rpm-ostree install docker-ce-cli && \
     rpm-ostree install docker-compose-plugin && \
