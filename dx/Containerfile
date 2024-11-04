@@ -3,7 +3,7 @@
 ARG SOURCE_TAG="latest"
 FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 
-COPY etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
+COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
 
 COPY build-dx.sh /tmp/build.sh
 
