@@ -8,7 +8,7 @@
   * ostree-image-signed:ghcr.io/ialexandermoon/labwc:{{version}}
   * https://github.com/iAlexanderMoon/labwc/pkgs/container/labwc
 
-## Image contents from Sericea
+## Image contents from Univeral Blue Sericea
 * foot: terminal
 * swaylock : screen locker
 * waybar : customizable bar for sway
@@ -17,12 +17,20 @@
   * rofi -show run
   * rofi -show drun
 * dunst : notification daemon
-* kanshi : dynamic display configruation tool
+* kanshi : dynamic display configuration tool
 * Thunar : wayland file manager
 * grim & slurp : screenshots
 
-## Images contents added
+### Univeral Blue Customizations
+* ujust
+* brew
+
+
+## Image contents added here
 * labwc
+
+### Image Customizations
+* ADD MORE CONTENT HERE
 
 # Install
 * From an ostree based system
