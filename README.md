@@ -9,6 +9,7 @@
   * https://github.com/iAlexanderMoon/labwc/pkgs/container/labwc
 
 ## Image contents from Univeral Blue Sericea
+* sddm: greeter
 * foot: terminal
 * swaylock : screen locker
 * waybar : customizable bar for sway
@@ -40,6 +41,7 @@
 ## Rebase to unverified to get the signing key and reboot
 ```sh 
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/ialexandermoon/labwc:{{version}}
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/ialexandermoon/labwc-dx:{{version}}
 systemctl reboot
 ```
 ## Rebase to the signed version

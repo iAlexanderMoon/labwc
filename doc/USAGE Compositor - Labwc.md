@@ -49,14 +49,15 @@ more /usr/share/doc/labwc/rc.xml.all
 
   <keyboard>
     <default />
-
     <keybind key="W-F4"><action name="None" /></keybind>
+
     <keybind key="W-r"><action name="Reconfigure" /></keybind>
     <keybind key="W-Return"><action name="Execute" command="foot" /></keybind>
     <keybind key="W-d"><action name="Execute" command="rofi -show drun" /></keybind>
     <keybind key="W-Tab"><action name="Execute" command="rofi -show window" /></keybind>
     <keybind key="W-q"><action name="Exit"/></keybind>
     <keybind key="W-f"><action name="ToggleFullscreen"/></keybind>
+    <keybind key="W-l"><action name="Execute" command="swaylock" /></keybind>
 
     <keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
     <keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
@@ -67,8 +68,93 @@ more /usr/share/doc/labwc/rc.xml.all
     <keybind key="W-S-2"><action name="SendToDesktop" to="2" follow="yes" wrap="yes" /></keybind>
     <keybind key="W-S-3"><action name="SendToDesktop" to="3" follow="yes" wrap="yes" /></keybind>
     <keybind key="W-S-4"><action name="SendToDesktop" to="4" follow="yes" wrap="yes" /></keybind>
+
+    <keybind key="W-C-1"><action name="MoveToOutput" output="DP-1" direction="value" wrap="no" /></keybind>
+    <keybind key="W-C-2"><action name="MoveToOutput" output="DP-2" direction="value" wrap="no" /></keybind>
+    <keybind key="W-C-3"><action name="MoveToOutput" output="DP-3" direction="value" wrap="no" /></keybind>
+
+    <keybind key="W-S-Right"><action name="MoveToOutput" direction="right" wrap="no" /></keybind>
+    <keybind key="W-S-Left"><action name="MoveToOutput" direction="left" wrap="no" /></keybind>
+
   </keyboard>
 ```
+
+* $HOME/.config/menu.xml
+* Root: Primary Left Mouse Click on Screen
+* Custom: Secondary: Right Mouse Click on Screen
+```xml
+<menu id="root-menu">
+  <!-- Make client-list-combined-menu a submenu of root-menu 
+       You must supply a label or it will not appear in root-menu -->
+  <!--
+  <menu id="client-list-combined-menu" label="Running..." />
+  -->
+
+  <separator label="Primary" />
+
+  <item label="Terminal">
+    <action name="Execute" command="foot" />
+  </item>
+  <item label="File Browser">
+    <action name="Execute" command="Thunar" />
+  </item>
+  <item label="Web Browser">
+    <action name="Execute" command="flatpak run org.mozilla.firefox" />
+  </item>
+  <item label="Email">
+    <action name="Execute" command="flatpak run org.mozilla.Thunderbird" />
+  </item>
+  <item label="VSCodium">
+    <action name="Execute" command="flatpak run com.vscodium.codium" />
+  </item>
+  <item label="VSCode">
+    <action name="Execute" command="flatpak run com.visualstudio.code" />
+  </item>
+
+  <separator/>
+
+  <item label="Lock Screen">
+    <action name="Execute" command="swaylock" />
+  </item>
+
+</menu>
+
+<menu id="some-custom-menu">
+  <!--
+    Creates menu title.
+    To create an empty header with no text,
+    set label=" ", not label=""
+  -->
+  <separator label="Secondary" />
+
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+
+  <separator/>
+
+  <item label="Logout">
+    <action name="Exit" />
+  </item>
+
+  <separator/>
+
+  <item label="Reboot">
+    <action name="Execute" command="systemctl -i reboot" />
+  </item>
+  <item label="Poweroff">
+    <action name="Execute" command="systemctl -i poweroff" />
+  </item>
+</menu>
+
+```
+
+
+### Multiple Monitors
+* Labwc calls each monitor an output
+* You can use actions MoveToOutput instead of SendToDesktop
+* Each desktop has the full set of outputs
+
 
 
 ## OTHER

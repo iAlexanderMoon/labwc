@@ -41,17 +41,22 @@ pkill waybar, waybar & disown
 * waybar show workspaces: UNFORTUNATELY, Not currently possible with waybar
 * https://www.reddit.com/r/unixporn/comments/188ok2j/labwc_a_nice_simple_wayland_desktop/
 
-## 
+
+## Change grub bootloader image name
+* How can we change the bootloader image (Sway Atomic) Where is that done?
+
+## Change Greeter Background Image
+* SDDM is the greeter being used?
+* Simple Desktop Display Manager (SDDM) 
+* 
+
 
 ## Alarm
 * could we set an alarm for the clock to go off? swaybar?
 * 
 
 ## Developer Experience
-* docker-ce: added from base image
-* vscode: with devcontainer support
-* toolbx
-* vscode: toolbx support
+* vscode: with devcontainer support (does flathub vscode work with host docker?)
 
 ## Apps
 * bitwarden: from flakhub?

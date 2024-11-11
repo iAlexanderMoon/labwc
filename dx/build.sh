@@ -24,4 +24,5 @@ rpm-ostree install docker-compose-plugin
 #### Example for enabling a System Unit File
 
 systemctl enable docker.socket
+# systemctl enable containerd.service
 #systemctl enable podman.socket
