@@ -15,8 +15,18 @@ flatpak install flathub com.visualstudio.code
 ```
 
 ## devcontainers
+* https://containers.dev/
 * docker
 * docker compose
+
+### Devcontainers with VSCode
+* .devcontainers with vscode
+
+### DevPod
+* .devcontainers.json with devpod (if you don't use vscode to manage the development container)
+  * https://devpod.sh/
+  * VS Code and the full JetBrains suite is supported.
+  * $HOME/.devpod
 
 ## toolbox containers
 * similar to a devcontainer using OCI containers and podman
