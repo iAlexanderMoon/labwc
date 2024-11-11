@@ -12,11 +12,18 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
+# Install packages from docker-ce.repo (configured in /etc/yum.repos.d)
 rpm-ostree install containerd.io
 rpm-ostree install docker-ce
 rpm-ostree install docker-ce-cli
 rpm-ostree install docker-compose-plugin
+rpm-ostree install toolbox
+
+# Install packages from fedora repos:
+# I might prefer using flatpak but getting docker container and toolbox development to work was easier integrated into the system image.
+# Also, that's the way UBlue does it as it for their developer experience
+rpm-ostree install code
+
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
