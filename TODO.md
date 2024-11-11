@@ -46,17 +46,18 @@ pkill waybar, waybar & disown
 * How can we change the bootloader image (Sway Atomic) Where is that done?
 
 ## Change Greeter Background Image
-* SDDM is the greeter being used?
+* SDDM is the greeter being used.
 * Simple Desktop Display Manager (SDDM) 
-* 
 
+## Change background image for screen locker
+* swaylock background image
 
 ## Alarm
 * could we set an alarm for the clock to go off? swaybar?
-* 
 
 ## Developer Experience
 * vscode: with devcontainer support (does flathub vscode work with host docker?)
+  * doesn't seem to be try install vscode in the image and see how that works instead.
 
 ## Apps
 * bitwarden: from flakhub?
