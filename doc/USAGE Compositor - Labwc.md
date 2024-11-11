@@ -82,6 +82,7 @@ more /usr/share/doc/labwc/rc.xml.all
 * $HOME/.config/menu.xml
 * Root: Primary Left Mouse Click on Screen
 * Custom: Secondary: Right Mouse Click on Screen
+  * Use a labwc-menu-generator to create a launcher for installed applications
 ```xml
 <menu id="root-menu">
   <!-- Make client-list-combined-menu a submenu of root-menu 
@@ -90,7 +91,7 @@ more /usr/share/doc/labwc/rc.xml.all
   <menu id="client-list-combined-menu" label="Running..." />
   -->
 
-  <separator label="Primary" />
+  <separator label="Quick" />
 
   <item label="Terminal">
     <action name="Execute" command="foot" />
@@ -125,7 +126,7 @@ more /usr/share/doc/labwc/rc.xml.all
     To create an empty header with no text,
     set label=" ", not label=""
   -->
-  <separator label="Secondary" />
+  <separator label="Full" />
 
   <item label="Reconfigure">
     <action name="Reconfigure" />
@@ -133,9 +134,15 @@ more /usr/share/doc/labwc/rc.xml.all
 
   <separator/>
 
+  <!-- Pipemenu -->
+  <menu id="" label="Application" execute="labwc-menu-generator -p"/>
+
+  <separator/>
+
   <item label="Logout">
     <action name="Exit" />
   </item>
+
 
   <separator/>
 
