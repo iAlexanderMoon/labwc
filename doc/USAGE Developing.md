@@ -44,3 +44,8 @@ toolbox rm
 ## C
 
 ## C#
+
+## Virtual Machines
+* quickemu
+* https://developer.fedoraproject.org/tools/virtualization/installing-qemu-on-fedora-linux.html
+* 
