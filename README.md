@@ -27,6 +27,7 @@
 * brew
 
 
+
 ## Image contents added here
 * labwc
 
@@ -38,6 +39,16 @@
   * Although your current running system will be the fallback you can always pin it manually to keep it around before rebasing below
   * see ostree admin pin <number>
 
+# Update
+* update all: 
+  * ujust update
+* system image: 
+  * sudo bootc upgrade
+* flatpaks:
+  * flatpak update -y
+* brew:
+  * brew upgrade 
+  
 ## Rebase to unverified to get the signing key and reboot
 ```sh 
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/ialexandermoon/labwc:{{version}}
