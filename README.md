@@ -40,14 +40,26 @@
   * see ostree admin pin <number>
 
 # Update
-* update all: 
-  * ujust update
-* system image: 
-  * sudo bootc upgrade
-* flatpaks:
-  * flatpak update -y
-* brew:
-  * brew upgrade 
+* update all
+* system image
+* flatpaks
+* brew
+
+```sh
+ujust update
+```
+or
+```
+sudo bootc upgrade
+```
+
+```
+flatpak update -y
+```
+
+```
+brew upgrade 
+```
   
 ## Rebase to unverified to get the signing key and reboot
 ```sh 
