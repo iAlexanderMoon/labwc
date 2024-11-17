@@ -20,6 +20,15 @@ rpm-ostree install docker-compose-plugin
 rpm-ostree install toolbox
 
 # Install packages from fedora repos:
+## Virtualization:
+rpm-ostree install @virtualization
+
+## QuickEmu is not in the default fedora repository
+## https://copr.fedorainfracloud.org/coprs/aquacash5/quickemu/repo/fedora-41/aquacash5-quickemu-fedora-41.repo
+## to /etc/yum.repos.d
+## rpm-ostree install quickemu
+
+
 # I might prefer using flatpak but getting docker container and toolbox development to work was easier integrated into the system image.
 # Also, that's the way UBlue does it as it for their developer experience
 rpm-ostree install code
@@ -31,5 +40,8 @@ rpm-ostree install code
 #### Example for enabling a System Unit File
 
 systemctl enable docker.socket
+systemctl enable libvirtd
 # systemctl enable containerd.service
 #systemctl enable podman.socket
+sudo curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/errornointernet/mergerfs/repo/fedora-39/errornointernet-mergerfs-fedora-39.repo
+sudo rpm-ostree refresh-md --force
