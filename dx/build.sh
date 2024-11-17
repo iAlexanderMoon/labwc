@@ -43,5 +43,3 @@ systemctl enable docker.socket
 systemctl enable libvirtd
 # systemctl enable containerd.service
 #systemctl enable podman.socket
-sudo curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/errornointernet/mergerfs/repo/fedora-39/errornointernet-mergerfs-fedora-39.repo
-sudo rpm-ostree refresh-md --force
