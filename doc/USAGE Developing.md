@@ -40,6 +40,8 @@ toolbox rm
 ## Go
 
 ## Rust
+* https://github.com/devcontainers/images/tree/main/src/rust
+
 
 ## C
 
