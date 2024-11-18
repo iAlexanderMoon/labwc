@@ -21,7 +21,7 @@ rpm-ostree install toolbox
 
 # Install packages from fedora repos:
 ## Virtualization:
-rpm-ostree install @virtualization
+#rpm-ostree install @virtualization
 
 ## QuickEmu is not in the default fedora repository
 ## https://copr.fedorainfracloud.org/coprs/aquacash5/quickemu/repo/fedora-41/aquacash5-quickemu-fedora-41.repo
@@ -40,6 +40,6 @@ rpm-ostree install code
 #### Example for enabling a System Unit File
 
 systemctl enable docker.socket
-systemctl enable libvirtd
+#systemctl enable libvirtd
 # systemctl enable containerd.service
 #systemctl enable podman.socket
