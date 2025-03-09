@@ -73,5 +73,13 @@ rpm-ostree rebase ostree-image-signed:ghcr.io/ialexandermoon/labwc:{{version}}
 systemctl reboot
 ```
 
+# Other notes
+* ostree commands
+* rpm-ostree commands
 
+```sh
+ostree admin status
+
+rpm-ostree status 
+```
 
