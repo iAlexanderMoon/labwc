@@ -5,9 +5,9 @@ FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 
 # Docker repo doesn't have 42 yet.
 #COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
-COPY dx/etc/yum.repos.d/vscode.repo /etc/yum.repos.d/vscode.repo
+COPY 42/dx/etc/yum.repos.d/vscode.repo /etc/yum.repos.d/vscode.repo
 
-COPY dx/build.sh /tmp/build.sh
+COPY 42/dx/build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
