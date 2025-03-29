@@ -1,4 +1,4 @@
-name: ulabwc dx 42
+name: ulabwc 42 dx
 on:
   schedule:
     - cron: '25 10 * * *'  # 10:25am UTC everyday
