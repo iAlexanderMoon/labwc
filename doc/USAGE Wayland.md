@@ -5,6 +5,7 @@
 * wlr-randr for changing screen settings
 * kanshi can be used to configure a profile (profiles are selected based on the display devices present)
 * DisplayPort 1.2 allows for up to four 1920x1200/1080 or two 2560x1440 displays chained off a single port. 
+* DisplayPort 1.4 can support up to four 4K monitors at 60Hz with Display Stream Compression
 
 ## wlr-randr 
 * https://gitlab.freedesktop.org/emersion/wlr-randr/
