@@ -14,4 +14,4 @@ jobs:
     uses: ./.github/workflows/build-version-dx.yml
     secrets: inherit
     with:
-      fedora_version: 41
+      fedora_version: 42
