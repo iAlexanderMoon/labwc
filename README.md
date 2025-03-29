@@ -9,6 +9,7 @@
   * https://github.com/iAlexanderMoon/labwc/pkgs/container/labwc
 
 ## Image contents from sway atomic
+* https://fedoraproject.org/atomic-desktops/sway/
 * sddm: greeter
 * foot: terminal
 * swaylock : screen locker
@@ -21,6 +22,7 @@
 * kanshi : dynamic display configuration tool
 * Thunar : wayland file manager
 * grim & slurp : screenshots
+* firefox: web browser
 
 ## Image contents from ublue main
 * https://github.com/ublue-os/main/blob/main/build_files/install.sh
