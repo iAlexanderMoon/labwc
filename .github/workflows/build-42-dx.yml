@@ -1,4 +1,4 @@
-name: ulabwc-dx:41 with docker development
+name: ulabwc dx 42
 on:
   schedule:
     - cron: '25 10 * * *'  # 10:25am UTC everyday

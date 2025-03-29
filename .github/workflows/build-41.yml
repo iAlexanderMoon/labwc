@@ -1,4 +1,4 @@
-name: ublue sericea-main:41 with labwc
+name: ulabwc 41
 on:
   schedule:
     - cron: '05 10 * * *'  # 10:05am UTC everyday
