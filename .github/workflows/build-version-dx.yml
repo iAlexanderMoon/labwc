@@ -52,9 +52,15 @@ jobs:
               BUILD_TAGS+=("${TAG}-${TIMESTAMP}")
           done
 
-          BUILD_TAGS+=("${TIMESTAMP}")
           BUILD_TAGS+=("${{ inputs.fedora_version }}")
-          #BUILD_TAGS+=("latest")
+
+          if [[ "${{ inputs.fedora_version }}" -eq "41" ]]; then
+            BUILD_TAGS+=("latest-${TIMESTAMP}")
+            BUILD_TAGS+=("latest")
+          elif [[ "${{ inputs.fedora_version }}" -eq "42" ]]; then
+            BUILD_TAGS+=("beta-${TIMESTAMP}")
+            BUILD_TAGS+=("beta")
+          fi
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               echo "Generated the following commit tags: "
