@@ -1,14 +1,14 @@
 # README
-* Add labwc to universal blue sericea (sway atomic desktop) variant
-* Built on Universal Blue "sericea-main:version"
+* Add labwc to universal blue sway-atomic-main
+* Built on Universal Blue "sway-atomic-main:version"
   * https://github.com/ublue-os/main
-  * https://github.com/ublue-os/main/pkgs/container/sericea-main/versions?filters%5Bversion_type%5D=tagged
+  * https://github.com/ublue-os/main/pkgs/container/sway-atomic-main/versions?filters%5Bversion_type%5D=tagged
 * Published to:
   * ostree-unverified-registry:ghcr.io/ialexandermoon/labwc:{{version}}
   * ostree-image-signed:ghcr.io/ialexandermoon/labwc:{{version}}
   * https://github.com/iAlexanderMoon/labwc/pkgs/container/labwc
 
-## Image contents from Univeral Blue Sericea
+## Image contents from sway atomic
 * sddm: greeter
 * foot: terminal
 * swaylock : screen locker
@@ -22,11 +22,11 @@
 * Thunar : wayland file manager
 * grim & slurp : screenshots
 
-### Univeral Blue Customizations
-* ujust
-* brew
-
-
+## Image contents from ublue main
+* https://github.com/ublue-os/main/blob/main/build_files/install.sh
+  * ujust
+  * brew
+  * dnf5
 
 ## Image contents added here
 * labwc
