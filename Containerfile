@@ -50,6 +50,9 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY build.sh /tmp/build.sh
 
+# Adding this for 42
+COPY sysfiles/usr/share/wayland-sessions/labwc.desktop /usr/share/wayland-sessions/labwc.desktop
+
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
