@@ -1,0 +1,18 @@
+# Build upon labwc
+## SOURCE_TAG arg must be a version built for the specific image: eg, 39, 40, gts, latest
+ARG SOURCE_TAG="latest"
+FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
+
+# Docker repo doesn't have 42 yet.
+#COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
+COPY dx/etc/yum.repos.d/vscode.repo /etc/yum.repos.d/vscode.repo
+
+COPY dx/build.sh /tmp/build.sh
+
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/build.sh && \
+    ostree container commit
+## NOTES:
+# - /var/lib/alternatives is required to prevent failure with some RPM installs
+# - All RUN commands must end with ostree container commit
+#   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
