@@ -59,4 +59,4 @@ RUN mkdir -p /var/lib/alternatives && \
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
 # labwc wayland session was missing even after installing labwc
-COPY 42/sys_files/usr/share/wayland-sessions/labwc.desktop /usr/share/wayland-sessions/labwc.desktop
+COPY sys_files/usr/share/wayland-sessions/labwc.desktop /usr/share/wayland-sessions/labwc.desktop
