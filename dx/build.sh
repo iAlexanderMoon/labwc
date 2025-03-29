@@ -13,10 +13,11 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # Install packages from docker-ce.repo (configured in /etc/yum.repos.d)
-rpm-ostree install containerd.io
-rpm-ostree install docker-ce
-rpm-ostree install docker-ce-cli
-rpm-ostree install docker-compose-plugin
+#rpm-ostree install containerd.io
+#rpm-ostree install docker-ce
+#rpm-ostree install docker-ce-cli
+#rpm-ostree install docker-compose-plugin
+
 rpm-ostree install toolbox
 
 # Install packages from fedora repos:
@@ -39,7 +40,7 @@ rpm-ostree install code
 
 #### Example for enabling a System Unit File
 
-systemctl enable docker.socket
+#systemctl enable docker.socket
 #systemctl enable libvirtd
 # systemctl enable containerd.service
 #systemctl enable podman.socket

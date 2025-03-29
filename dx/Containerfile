@@ -3,7 +3,8 @@
 ARG SOURCE_TAG="latest"
 FROM ghcr.io/ialexandermoon/labwc:${SOURCE_TAG}
 
-COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
+# Docker repo doesn't have 42 yet.
+#COPY dx/etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo 
 COPY dx/etc/yum.repos.d/vscode.repo /etc/yum.repos.d/vscode.repo
 
 COPY dx/build.sh /tmp/build.sh
