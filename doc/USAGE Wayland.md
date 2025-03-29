@@ -4,7 +4,7 @@
 * each monitor is called a screen
 * wlr-randr for changing screen settings
 * kanshi can be used to configure a profile (profiles are selected based on the display devices present)
-
+* DisplayPort 1.2 allows for up to four 1920x1200/1080 or two 2560x1440 displays chained off a single port. 
 
 ## wlr-randr 
 * https://gitlab.freedesktop.org/emersion/wlr-randr/
