@@ -47,9 +47,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ### 3. MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
-WORKDIR 42
 
-COPY build.sh /tmp/build.sh
+COPY 42/build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
@@ -60,4 +59,4 @@ RUN mkdir -p /var/lib/alternatives && \
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
 # labwc wayland session was missing even after installing labwc
-COPY sys_files/usr/share/wayland-sessions/labwc.desktop /usr/share/wayland-sessions/labwc.desktop
+COPY 42/sys_files/usr/share/wayland-sessions/labwc.desktop /usr/share/wayland-sessions/labwc.desktop
