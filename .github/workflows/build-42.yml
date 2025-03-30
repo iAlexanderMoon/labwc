@@ -31,7 +31,7 @@ jobs:
       contents: read
       packages: write
       id-token: write
-    uses: ./.github/workflows/build-41-dx.yml
+    uses: ./.github/workflows/build-41-main-dx.yml
     secrets: inherit
     with:
       fedora_version: 42
