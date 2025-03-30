@@ -1,19 +1,9 @@
-name: ulabwc 42
+name: ulabwc 42 dxx
 on:
-  schedule:
-    - cron: '05 10 * * *'  # 10:05am UTC everyday
-#  pull_request:
-#    branches:
-#      - main
-#  push:
-#    branches:
-#      - main
-#    paths-ignore:
-#      - '**/README.md'
   workflow_dispatch:
 
 jobs:
-  build-main:
+  build-dxx:
     name: build 41 main
     permissions:
       contents: read
@@ -24,7 +14,7 @@ jobs:
     with:
       fedora_version: 42
 
-  build-dx:
+  build-dxx:
     needs: build-main
     name: build 41 dx
     permissions:
