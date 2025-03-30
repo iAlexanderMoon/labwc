@@ -1,7 +1,12 @@
 ---
-name: ulabwc 41 dx
+name: ulabwc-main-dx
 on:
   workflow_call:
+    inputs:
+      fedora_version:
+        description: "The Fedora release version: 39, 40, 41 etc"
+        required: true
+        type: string
 
 jobs:
   build:
@@ -13,4 +18,4 @@ jobs:
     uses: ./.github/workflows/build-version-dx.yml
     secrets: inherit
     with:
-      fedora_version: 41
+      fedora_version: ${{ inputs.fedora_version }}
