@@ -4,24 +4,13 @@ on:
 
 jobs:
   build-dxx:
-    name: build 41 main
+    name: build 42 dxx
     permissions:
       contents: read
       packages: write
       id-token: write
-    uses: ./.github/workflows/build-main.yml
+    uses: ./.github/workflows/build-version-dxx.yml
     secrets: inherit
     with:
       fedora_version: 42
 
-  build-dxx:
-    needs: build-main
-    name: build 41 dx
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
-    uses: ./.github/workflows/build-main-dx.yml
-    secrets: inherit
-    with:
-      fedora_version: 42
