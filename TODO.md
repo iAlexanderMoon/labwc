@@ -52,8 +52,14 @@ pkill waybar, waybar & disown
 ## Change background image for screen locker
 * swaylock background image
 
+## Sleep after idle
+* swayidel and swaylock
+
+
 ## Alarm
 * could we set an alarm for the clock to go off? swaybar?
+
+## Sleep swaylock
 
 ## Developer Experience
 * vscode: with devcontainer support (does flathub vscode work with host docker?)
@@ -70,12 +76,13 @@ pkill waybar, waybar & disown
 
 # 42
 * Use docker from fedora packages until packages for 42 are published by docker 
-* use dnf5
+* use dnf5: clean up all rpm-ostree install commands
+* include lazydocker in dx from copr? or from brew? or from github?
 
 ### Installed System Apps from fedora packages
 * cosmic-term
 * cosmic-player
-* comsic-store
+* cosmic-store
 * cosmic-files
 * cosmic-launcher
 * cosmic-edit
