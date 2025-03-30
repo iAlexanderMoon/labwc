@@ -27,8 +27,9 @@ jobs:
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
 
-      - name: Maximize build space
-        uses: ublue-os/remove-unwanted-software@v9
+      # This takes 5 minutes of the 6 minute build time... do we need to do it?
+      #- name: Maximize build space
+      #  uses: ublue-os/remove-unwanted-software@v9
 
       # Should be modified to support variants: main, nvidia etc... but just supporting main for now
       # Use fedora_version instead of assuming latest: could also use: latest, gts, 40, 41
