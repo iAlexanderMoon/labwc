@@ -1,0 +1,37 @@
+name: ulabwc 42
+on:
+  schedule:
+    - cron: '05 10 * * *'  # 10:05am UTC everyday
+#  pull_request:
+#    branches:
+#      - main
+#  push:
+#    branches:
+#      - main
+#    paths-ignore:
+#      - '**/README.md'
+  workflow_dispatch:
+
+jobs:
+  build-main:
+    name: build 41 main
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    uses: ./.github/workflows/build-main.yml
+    secrets: inherit
+    with:
+      fedora_version: 42
+
+  build-dx:
+    needs: build-main
+    name: build 41 dx
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    uses: ./.github/workflows/build-main-dx.yml
+    secrets: inherit
+    with:
+      fedora_version: 42
