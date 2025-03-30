@@ -1,5 +1,5 @@
 ---
-name: ulabwc-main
+name: build-main
 on:
   workflow_call:
     inputs:
