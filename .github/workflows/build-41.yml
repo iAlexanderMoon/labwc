@@ -13,13 +13,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: build version
+  build-main:
+    name: build 41 main
     permissions:
       contents: read
       packages: write
       id-token: write
-    uses: ./.github/workflows/build-version.yml
+    uses: ./.github/workflows/build-41-main.yml
     secrets: inherit
-    with:
-      fedora_version: 41
+
+  build-dx:
+    name: build 41 main
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    uses: ./.github/workflows/build-41-dx.yml
+    secrets: inherit

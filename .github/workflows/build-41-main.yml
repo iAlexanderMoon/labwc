@@ -1,14 +1,14 @@
 ---
-name: ulabwc 41 dx
+name: ulabwc 41 main
 
 jobs:
   build:
-    name: build version dx
+    name: build version
     permissions:
       contents: read
       packages: write
       id-token: write
-    uses: ./.github/workflows/build-version-dx.yml
+    uses: ./.github/workflows/build-version.yml
     secrets: inherit
     with:
       fedora_version: 41
