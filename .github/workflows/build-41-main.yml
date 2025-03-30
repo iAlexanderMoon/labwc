@@ -1,5 +1,7 @@
 ---
 name: ulabwc 41 main
+on:
+  workflow_call:
 
 jobs:
   build:

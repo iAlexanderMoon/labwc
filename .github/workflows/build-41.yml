@@ -23,7 +23,7 @@ jobs:
     secrets: inherit
 
   build-dx:
-    name: build 41 main
+    name: build 41 dx
     permissions:
       contents: read
       packages: write
