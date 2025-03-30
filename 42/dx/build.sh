@@ -7,18 +7,20 @@ RELEASE="$(rpm -E %fedora)"
 
 ### Install packages
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
+# docker from docker repos: not enabled for fedora 42 yet
+# https://docs.docker.com/engine/install/fedora/
 # Install packages from docker-ce.repo (configured in /etc/yum.repos.d)
-#rpm-ostree install containerd.io
-#rpm-ostree install docker-ce
-#rpm-ostree install docker-ce-cli
-#rpm-ostree install docker-compose-plugin
+#dnf5 -y install containerd.io
+#dnf5 -y install docker-ce
+#dnf5 -y install docker-ce-cli
+#dnf5 -y install docker-compose-plugin
 
-rpm-ostree install toolbox
+# docker from fedora repos
+# https://docs.fedoraproject.org/en-US/quick-docs/installing-docker/
+dnf5 -y install docker-cli containerd docker-compose moby-engine
+
+dnf5 -y install toolbox
+
 
 # Install packages from fedora repos:
 ## Virtualization:
@@ -27,16 +29,20 @@ rpm-ostree install toolbox
 ## QuickEmu is not in the default fedora repository
 ## https://copr.fedorainfracloud.org/coprs/aquacash5/quickemu/repo/fedora-41/aquacash5-quickemu-fedora-41.repo
 ## to /etc/yum.repos.d
-## rpm-ostree install quickemu
+## rpm-ostree install quickemu 
 
 
 # I might prefer using flatpak but getting docker container and toolbox development to work was easier integrated into the system image.
 # Also, that's the way UBlue does it as it for their developer experience
-rpm-ostree install code
+dnf5 -y install code
 
-
-# this would install a package from rpmfusion
-# rpm-ostree install vlc
+## Let also add these cosmic tools while we are at it to try them out.
+dnf5 -y cosmic-term
+dnf5 -y cosmic-player
+dnf5 -y comsic-store
+dnf5 -y cosmic-files
+dnf5 -y cosmic-launcher
+dnf5 -y cosmic-edit
 
 #### Example for enabling a System Unit File
 

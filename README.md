@@ -30,6 +30,12 @@
   * brew
   * dnf5
 
+
+## Image Contents added here from
+* fedora packages https://packages.fedoraproject.org/
+* fedora copr https://copr.fedorainfracloud.org/
+* direct downloads
+
 ## Image contents added here
 * labwc
 

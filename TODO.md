@@ -66,3 +66,17 @@ pkill waybar, waybar & disown
   * use in thunderbird or geary or other mail
   * gnome-calendar or other
   * gnome-contacts or other
+
+
+# 42
+* Use docker from fedora packages until packages for 42 are published by docker 
+* use dnf5
+
+### Installed System Apps from fedora packages
+* cosmic-term
+* cosmic-player
+* comsic-store
+* cosmic-files
+* cosmic-launcher
+* cosmic-edit
+* neovide? neovim.vscode?
